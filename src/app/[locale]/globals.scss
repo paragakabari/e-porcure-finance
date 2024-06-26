@@ -1,0 +1,79 @@
+@import "../../scss/mixins/container.scss";
+@import "../../scss/mixins/breakpoints.scss";
+@import "../../scss/mixins/typography.scss";
+@import "../../scss/mixins/layout.scss";
+@import "../../scss/mixins/input.scss";
+@import "../../scss/theme.scss";
+@import "../../scss/common.scss";
+@import "../../scss/variables.scss";
+@import "../../component/header/header.scss";
+@import "../../component/dashboard/dashboard.scss";
+@import "../../component/order-management/order.scss";
+@import "../../component/popup/popup.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  background: #ebedef !important;
+  // color: var(--palette-text-primary-color);
+  height: 100%;
+  // overflow: hidden;
+  // overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+p:last-child {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
+}
+
+.breadcrumb-divider {
+  li,
+  li a {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 300;
+    @include breakpoint("md-max") {
+        color: #1e0545;
+    }
+
+    &:not(:first-child)::before {
+      content: ">";
+      color: $color-white;
+      position: relative;
+      right: 0.2rem;
+
+      float: left !important;
+    }
+
+    &:hover {
+      color: $color-white !important;
+    }
+  }
+}

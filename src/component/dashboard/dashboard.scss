@@ -1,0 +1,723 @@
+@import "../../scss/index.scss";
+.dashboardSection {
+  .dashboardAlignment {
+    position: relative;
+    padding: 24px 0;
+    .dashboardGrid {
+      display: grid;
+      grid-template-columns: 332px 1fr;
+      gap: 48px;
+
+      @include breakpoint("md-max") {
+        display: unset;
+      }
+
+      .rightSideAlignment {
+        .rightTopDetails {
+          .breadCrumb {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            p {
+              font-size: 16px;
+              line-height: 20px;
+              color: #ffffff;
+              font-weight: 300;
+              @include breakpoint("md-max") {
+                color: #1e0545;
+              }
+            }
+          }
+          h1 {
+            font-size: 33px;
+            line-height: 41px;
+            color: #fff !important;
+            text-shadow: 0px 3px 6px #00000029;
+            font-weight: 600;
+            padding: 12px 0 0 0;
+            @include breakpoint("md-max") {
+              color: #1e0545;
+            }
+
+            @include breakpoint("sm-max") {
+              font-size: 24px;
+              line-height: 38px;
+              padding: 8px 0 0 0;
+            }
+          }
+        }
+
+        .rightBottomDetails {
+          padding: 28px 0 0 0;
+
+          .rightBottomGrid {
+            display: grid;
+            grid-template-columns: 314px 1fr;
+            gap: 25px;
+
+            @include breakpoint("lg-max") {
+              grid-template-columns: 1fr;
+            }
+
+            @include breakpoint("sm-max") {
+              display: unset;
+              // grid-template-columns: 1fr;
+            }
+
+            .rightBottomLetf {
+              .rightBoxAlignment {
+                cursor: pointer;
+                width: 100%;
+                height: 198px;
+                border-radius: 20px;
+                background: linear-gradient(147deg, #ff6a57 0%, #fdba77 100%);
+                margin: 0 0 15px 0;
+                position: relative;
+                .custom-section {
+                  cursor: pointer !important;
+                  padding: 20px;
+
+                  .header {
+                    display: flex;
+                    align-items: center;
+
+                    .header-text {
+                      font-size: 20px;
+                      color: $white-color;
+                      margin-right: 10px;
+                    }
+                  }
+
+                  h1 {
+                    font-size: 34px;
+                    color: $white-color;
+                    margin: 10px 0;
+                  }
+
+                  p {
+                    font-size: 16px;
+                    color: $white-color;
+                  }
+
+                  .logos {
+                    display: flex;
+                    align-items: center;
+
+                    .logo {
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 50%;
+                      margin-right: -10px;
+                      z-index: 99;
+                    }
+                  }
+
+                  .view-all {
+                    color: $white-color;
+                    cursor: pointer;
+                    text-decoration: none;
+                  }
+                }
+              }
+
+              .secondBox {
+                width: 100%;
+                height: 265px;
+                background: #ffffff;
+                border-radius: 20px;
+                @include breakpoint("sm-max") {
+                  height: auto;
+                  margin-bottom: 20px;
+                  canvas {
+                    width: 300px !important;
+                  }
+                }
+                .title {
+                  font-size: 18px;
+                  color: #272727;
+                }
+                .border-chart {
+                  width: 100%;
+                  height: 1px;
+                  background: #e0e0e0;
+                }
+                .subTitle {
+                  font-weight: 300;
+                  font-size: 12px;
+                  color: #272727;
+                }
+                .dotone {
+                  height: 7px;
+                  width: 7px;
+                  border-radius: 50%;
+                  background: #7ec483;
+                }
+                .dottwo {
+                  height: 7px;
+                  width: 7px;
+                  border-radius: 50%;
+                  background: #fda953;
+                }
+                .dotthree {
+                  height: 7px;
+                  width: 7px;
+                  border-radius: 50%;
+                  background: #ff6767;
+                }
+                .oneDot {
+                  p {
+                    color: #272727;
+                    font-size: 12px;
+                    font-weight: 300;
+                  }
+                }
+              }
+            }
+
+            .rightBottomRight {
+              width: 100%;
+              height: 478px;
+              border-radius: 20px;
+              background: #fff;
+              @include breakpoint("sm-max") {
+                height: auto;
+              }
+
+              .transaction-list {
+                padding: 20px;
+                .desktop-transation {
+                  display: block;
+                  @include breakpoint("sm-max") {
+                    display: none;
+                  }
+                }
+                .mobile-transation {
+                  display: none;
+                  @include breakpoint("sm-max") {
+                    display: block;
+                  }
+                  .card {
+                    background-color: #f8f8f8;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    .card-header {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      background-color: transparent;
+                      border: none;
+                      padding-bottom: 0;
+                      .request-id {
+                        font-size: 12px;
+                      }
+                      .request-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        .title {
+                          font-size: 14px;
+                          color: #333;
+                          font-weight: bold;
+                        }
+
+                        .date {
+                          font-size: 12px;
+                          color: #666;
+                        }
+                      }
+
+                      .amount {
+                        font-size: 18px;
+                        color: #000;
+                        font-weight: bold;
+                      }
+                    }
+
+                    .card-body {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding-top: 5px;
+
+                      .company-info {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        img {
+                          height: 30px;
+                          width: 30px;
+                          border-radius: 50%;
+                        }
+
+                        .company-details {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 2px;
+
+                          .company-name {
+                            font-size: 14px;
+                            color: #333;
+                            font-weight: bold;
+                          }
+
+                          .rfp-id {
+                            font-size: 12px;
+                            color: #666;
+                          }
+                        }
+                      }
+
+                      .status {
+                        background-color: #f8c471;
+                        border-radius: 4px;
+                        padding: 4px 8px;
+                        font-size: 12px;
+                        color: #fff;
+                        font-weight: bold;
+
+                        &.approved {
+                          background: #d4edda;
+                          color: #155724;
+                        }
+
+                        &.rejected {
+                          background: #f8d7da;
+                          color: #721c24;
+                        }
+                        &.pending {
+                          background: #fff3cd;
+                          color: #856404;
+                        }
+                      }
+                    }
+                  }
+                }
+                .transaction-header {
+                  margin-bottom: 20px;
+
+                  h2 {
+                    font-size: 14px;
+                    color: #645f5f;
+                  }
+                }
+
+                ul {
+                  max-height: 291px;
+                  overflow: scroll;
+                  overflow-x: hidden;
+                  list-style-type: none;
+                  padding: 0;
+
+                  .transaction-item {
+                    display: flex;
+                    // justify-content: space-between;
+                    gap: 70px;
+                    align-items: center;
+                    padding: 10px;
+                    background: #f7f7f7;
+                    margin-bottom: 3px;
+                    @include breakpoint("sm-max") {
+                      gap: 20px;
+                    }
+
+                    &:last-child {
+                      border-bottom: none;
+                    }
+
+                    .transaction-info {
+                      display: flex;
+                      align-items: center;
+
+                      .request-id {
+                        font-weight: bold;
+                        font-size: 10px;
+                        margin-right: 10px;
+                      }
+
+                      .date {
+                        font-size: 10px;
+                        color: #888;
+                        margin-right: 20px;
+                      }
+
+                      .finance-info {
+                        display: flex;
+                        align-items: center;
+
+                        .logo {
+                          width: 31px;
+                          height: 31px;
+                          margin: 0 10px;
+                        }
+
+                        .finance-title {
+                          font-weight: bold;
+                          display: block;
+                          font-size: 12px;
+                        }
+
+                        .rfp-id {
+                          color: #888;
+                          display: block;
+                          font-size: 10px;
+                        }
+                      }
+                    }
+
+                    .status {
+                      padding: 5px 10px;
+                      border-radius: 5px;
+                      font-weight: bold;
+                      font-size: 12px;
+                      cursor: pointer;
+
+                      &.approved {
+                        background: #d4edda;
+                        color: #155724;
+                      }
+
+                      &.rejected {
+                        background: #f8d7da;
+                        color: #721c24;
+                      }
+                      &.pending {
+                        background: #fff3cd;
+                        color: #856404;
+                      }
+                    }
+
+                    .amount {
+                      font-size: 16px;
+                      font-weight: bold;
+                    }
+                  }
+
+                  :hover {
+                    cursor: pointer;
+                    background: #fff;
+                  }
+                }
+
+                .summary {
+                  margin-top: 20px;
+                  background: #f1f1f1;
+                  border-radius: 10px;
+                  padding: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  .summary-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    h1 {
+                      font-size: 43px;
+                      margin-right: 20px !important;
+                    }
+
+                    p {
+                      font-size: 16px;
+                      margin-right: auto;
+                    }
+
+                    .view-all {
+                      background: transparent
+                        linear-gradient(92deg, #e5821f 0%, #b51b56 100%) 0% 0%
+                        no-repeat padding-box;
+                      color: white;
+                      height: 40px;
+                      width: 40px;
+                      line-height: 40px;
+                      text-align: center;
+                      border-radius: 50%;
+                      cursor: pointer;
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+            }
+            .transaction-lisst {
+              width: 100%;
+              height: 198px;
+              border-radius: 20px;
+
+              margin: 0 0 15px 0;
+
+              background: #fff;
+              @include breakpoint("sm-max") {
+                height: auto;
+              }
+
+              .summary {
+                margin-top: 20px;
+                background: #fff;
+                border-radius: 10px;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .summary-content {
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+
+                  h1 {
+                    font-size: 43px;
+                    margin-right: 20px !important;
+                  }
+
+                  p {
+                    font-size: 16px;
+                    margin-right: auto;
+                  }
+
+                  .view-all {
+                    background: transparent
+                      linear-gradient(92deg, #e5821f 0%, #b51b56 100%) 0% 0%
+                      no-repeat padding-box;
+                    color: white;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .rightSIdeOtherDetails {
+          background: #ffffff;
+          width: 100%;
+          height: 584px;
+          border-radius: 20px;
+          margin: 25px 0 0 0;
+
+          display: grid;
+          grid-template-columns: 309px 1fr;
+          @include breakpoint("sm-max") {
+            grid-template-columns: 1fr;
+          }
+          .first {
+            border-right: 1px solid #e2e2e2;
+            .wallet-dashboard {
+              .wallet-balance {
+                padding: 20px;
+
+                display: flex;
+                //   align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .wallet-icon {
+                  width: 135px;
+                  height: 135px;
+                }
+
+                .balance-info {
+                  .balance {
+                    font-size: 42px;
+                    font-weight: bold;
+                    .currency {
+                      font-size: 13px;
+                    }
+                  }
+                  .description {
+                    font-size: 22px;
+                  }
+                  .sub-description {
+                    font-size: 16px;
+                    color: #6c757d;
+                  }
+                  .recharge-button {
+                    margin-top: 15px;
+                    background-color: #fa7268;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: bold;
+                  }
+                }
+              }
+
+              .wallet-insights {
+                padding: 20px;
+
+                h2 {
+                  font-size: 16px;
+                  margin-bottom: 15px;
+                }
+
+                canvas {
+                  max-height: 200px;
+                }
+              }
+            }
+            .centerborder {
+              width: 100%;
+              height: 1px;
+              background: #e2e2e2;
+              margin: 22px 0;
+            }
+          }
+          .second {
+            padding: 20px;
+            @include breakpoint("sm-max") {
+              padding: 0;
+            }
+            .heading {
+              padding-bottom: 17px;
+              font-size: 14px;
+              color: #645f5f;
+            }
+            .coupon {
+              width: 580px;
+              overflow-x: scroll;
+              display: flex;
+              align-items: center;
+              flex-wrap: nowrap;
+              gap: 14px;
+              @include breakpoint("sm-max") {
+                width: 100%;
+                display: unset;
+                margin-bottom: 20px 0;
+              }
+              .coupon-detail {
+                min-width: 240px;
+                border-radius: 20px;
+                padding: 20px;
+                @include breakpoint("sm-max") {
+                  min-width: 100%;
+                  margin-bottom: 20px;
+                }
+                img {
+                  width: 30px;
+                  height: 30px;
+                }
+
+                .sub-heading {
+                  padding-top: 20px;
+                  font-size: 14px;
+                  color: #272727;
+                }
+                .subText {
+                  font-size: 10px;
+                  color: #272727;
+                }
+              }
+              .firstCaard {
+                background: #fff4dd;
+              }
+              .secondCard {
+                background: #fff2f2;
+              }
+              .thirdCard {
+                background: #1947ba;
+                color: #fff;
+                .sub-heading {
+                  padding-top: 20px;
+                  font-size: 14px;
+                  color: #fff;
+                }
+                .subText {
+                  font-size: 10px;
+                  color: #fff;
+                }
+              }
+            }
+            .transaction-list {
+              height: 300px;
+              overflow: scroll;
+              @include breakpoint("sm-max") {
+                height: auto;
+              }
+              .transaction {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                border: 1px solid #f1f1f1;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                background: #fafafa;
+                font-size: 10px;
+
+                &.with-coupon {
+                  border-left: 5px solid #fa7268;
+                }
+
+                .transaction-info {
+                  display: flex;
+                  flex-direction: column;
+                  .transaction-id {
+                    font-weight: bold;
+                  }
+                  .transaction-date {
+                    color: #6c757d;
+                    font-size: 12px;
+                  }
+                }
+
+                .transaction-type {
+                  display: flex;
+                  align-items: center;
+
+                  .reward-icon {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                  }
+
+                  .coupon-code {
+                    border: 1px dashed #6c757d;
+                    padding: 2px 5px;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    color: #6c757d;
+                  }
+                }
+
+                .transaction-amount {
+                  font-size: 18px;
+                  font-weight: bold;
+                }
+              }
+              :hover {
+                cursor: pointer;
+                background: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .test {
+    position: absolute;
+    bottom: 14px;
+  }
+}

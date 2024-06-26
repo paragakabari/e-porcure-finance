@@ -1,0 +1,278 @@
+@import "../../scss/index.scss";
+.dashboardSection {
+  .dashboardAlignment {
+    .dashboardGrid {
+      .rightSideAlignment {
+        .rightTopDetails {
+          @include breakpoint("sm-max") {
+            display: unset !important;
+            .resclass {
+              display: unset !important;
+            }
+            .importbutton {
+              margin-top: 20px;
+              margin-right: 20px;
+              text-align: center;
+            }
+            .rechargethewallet {
+              margin-top: 20px;
+              text-align: center;
+            }
+          }
+        }
+        .rechargethewallet {
+          background-color: #ff6a57;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 11px;
+          cursor: pointer;
+          color: #fff;
+        }
+        .importbutton {
+          background-color: #5284d3;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 11px;
+          cursor: pointer;
+          color: #fff;
+        }
+
+        .rightBottomDetails {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+          background: #fff;
+          margin: 20px 0 15px 0;
+          .employee-table {
+            width: 100%;
+            display: block;
+            @include breakpoint("sm-max") {
+              display: none;
+            }
+
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              th,
+              td {
+                padding: 10px;
+                font-size: 14px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+              }
+              th {
+                background-color: #fff;
+              }
+            }
+
+            .employee-info {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .initials {
+                padding: 0 !important;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                &.pending {
+                  background-color: #ffe6cc;
+                  color: #ff6600;
+                }
+                &.accepted {
+                  background-color: #e6ffe6;
+                  color: #33cc33;
+                }
+              }
+
+              .details {
+                .name {
+                  font-weight: bold;
+                }
+                .last-login {
+                  display: block;
+                  color: #666;
+                }
+              }
+            }
+
+            .assign-role,
+            .change-role,
+            .payment-permission {
+              color: #007bff;
+              text-decoration: none;
+              font-size: 12px;
+              margin: 0 5px;
+            }
+
+            .resend-invite {
+              background-color: #ffb266;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              color: white;
+              border-radius: 25px;
+              margin: 0 5px;
+              font-size: 12px;
+            }
+
+            .edit {
+              background: none;
+              border: none;
+              cursor: pointer;
+              margin-right: 5px;
+            }
+
+            .delete {
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: #ff3333;
+            }
+          }
+          .res-table {
+            display: none;
+            @include breakpoint("sm-max") {
+              display: block;
+            }
+            .card {
+              background-color: #f8f8f8;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 10px;
+              margin-bottom: 10px;
+
+              .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: transparent !important;
+                border-bottom: none !important;
+                .request-info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 4px;
+
+                  .title {
+                    font-size: 14px;
+                    color: #333;
+                    font-weight: bold;
+                  }
+
+                  .date {
+                    font-size: 12px;
+                    color: #666;
+                  }
+                }
+
+                .amount {
+                  font-size: 18px;
+                  color: #000;
+                  font-weight: bold;
+                }
+                .initials {
+                  padding: 0 !important;
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  &.pending {
+                    background-color: #ffe6cc;
+                    color: #ff6600;
+                  }
+                  &.accepted {
+                    background-color: #e6ffe6;
+                    color: #33cc33;
+                  }
+                }
+              }
+
+              .card-body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .company-info {
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+
+                  .company-logo {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  }
+
+                  .company-details {
+                    .assign-role,
+                    .change-role,
+                    .payment-permission {
+                      color: #007bff;
+                      text-decoration: none;
+                      font-size: 12px;
+                      margin: 0 5px;
+                    }
+
+                    button.resend-invite {
+                      background: #ffb266 !important;
+                      border: none;
+                      padding: 5px 10px;
+                      cursor: pointer;
+                      color: white;
+                      border-radius: 25px;
+                      margin: 0 5px;
+                      font-size: 12px;
+                    }
+
+                    .edit {
+                      background: none;
+                      border: none;
+                      cursor: pointer;
+                      margin-right: 5px;
+                    }
+
+                    .delete {
+                      background: none;
+                      border: none;
+                      cursor: pointer;
+                      color: #ff3333;
+                    }
+                  }
+                }
+
+                .status {
+                  background-color: #f8c471;
+                  border-radius: 4px;
+                  padding: 4px 8px;
+                  font-size: 12px;
+                  color: #fff;
+                  font-weight: bold;
+
+                  &.under-review {
+                    background-color: #f8c471;
+                  }
+                  &.approved {
+                    background-color: #27ae60;
+                  }
+                  &.rejected {
+                    background-color: #e74c3c;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

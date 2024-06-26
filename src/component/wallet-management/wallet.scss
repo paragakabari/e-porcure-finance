@@ -1,0 +1,390 @@
+@import "../../scss/index.scss";
+.dashboardSection {
+  .dashboardAlignment {
+    .dashboardGrid {
+      .rightSideAlignment {
+        .rechargethewallet {
+          background-color: #ff6a57;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 11px;
+          cursor: pointer;
+          color: #fff;
+        }
+        .wallet-balance {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          .wallet-icon {
+            width: 135px;
+            height: 135px;
+          }
+
+          .balance-info {
+            .balance {
+              font-size: 42px;
+              font-weight: bold;
+              .currency {
+                font-size: 13px;
+              }
+            }
+            .description {
+              font-size: 22px;
+            }
+            .sub-description {
+              font-size: 16px;
+              color: #6c757d;
+            }
+            .recharge-button {
+              margin-top: 15px;
+              background-color: #fa7268;
+              color: #fff;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 20px;
+              cursor: pointer;
+              font-size: 12px;
+              font-weight: bold;
+            }
+          }
+        }
+        .rightBottomDetails {
+          .rightBottomGrid {
+            display: grid;
+            grid-template-columns: 1fr 314px;
+            gap: 25px;
+
+            @include breakpoint("lg-max") {
+              grid-template-columns: 1fr;
+            }
+
+            .rightBottomLetf {
+              .rightBoxAlignment {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                background: #fff;
+                margin: 0 0 15px 0;
+                .transaction-list {
+                  padding: 20px;
+                  .desktop-table {
+                    display: block;
+                    @include breakpoint("sm-max") {
+                      display: none;
+                    }
+                  }
+                  .mobile-table {
+                    display: none;
+                    @include breakpoint("sm-max") {
+                      display: block;
+                    }
+                    .card {
+                      background-color: #f8f8f8;
+                      border-radius: 8px;
+                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                      margin-bottom: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 8px;
+                      width: 300px;
+
+                      .card-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .request-id {
+                          display: flex;
+                          align-items: center;
+                          gap: 4px;
+
+                          .title {
+                            font-size: 14px;
+                            color: #333;
+                            font-weight: bold;
+                          }
+
+                          .date {
+                            font-size: 12px;
+                            color: #666;
+                          }
+                        }
+
+                        .amount {
+                          font-size: 18px;
+                          color: #000;
+                          font-weight: bold;
+                        }
+                      }
+
+                      .card-body {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .company-info {
+                          display: flex;
+                          align-items: center;
+                          gap: 12px;
+                          .company-logo {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                          }
+                          .company-details {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2px;
+                            .company-name {
+                              font-size: 14px;
+                              color: #333;
+                              font-weight: bold;
+                            }
+                            .rfp-id {
+                              font-size: 12px;
+                              color: #666;
+                            }
+                          }
+                        }
+                        .status {
+                          border-radius: 4px;
+                          padding: 4px 8px;
+                          font-size: 12px;
+                          color: #fff;
+                          font-weight: bold;
+                          &.approved {
+                            background: #d4edda;
+                            color: #155724;
+                          }
+
+                          &.rejected {
+                            background: #f8d7da;
+                            color: #721c24;
+                          }
+                          &.pending {
+                            background: #fff3cd;
+                            color: #856404;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .transaction-header {
+                    display: flex;
+                    gap: 20px;
+                    .actives {
+                      color: #ff6a57;
+                    }
+                    margin-bottom: 20px;
+
+                    h2 {
+                      cursor: pointer;
+
+                      font-size: 14px;
+                      color: #645f5f;
+                    }
+                  }
+
+                  ul {
+                    max-height: 291px;
+                    overflow: scroll;
+                    overflow-x: hidden;
+                    list-style-type: none;
+                    padding: 0;
+
+                    .transaction-item {
+                      display: flex;
+                      // justify-content: space-between;
+                      gap: 70px;
+                      align-items: center;
+                      padding: 10px;
+                      background: #f7f7f7;
+                      margin-bottom: 3px;
+                      @include breakpoint("sm-max") {
+                        gap: 20px;
+                      }
+
+                      &:last-child {
+                        border-bottom: none;
+                      }
+
+                      .transaction-info {
+                        display: flex;
+                        align-items: center;
+
+                        .request-id {
+                          font-weight: bold;
+                          font-size: 10px;
+                          margin-right: 10px;
+                        }
+
+                        .date {
+                          font-size: 10px;
+                          color: #888;
+                          margin-right: 20px;
+                        }
+
+                        .finance-info {
+                          display: flex;
+                          align-items: center;
+
+                          .logo {
+                            width: 31px;
+                            height: 31px;
+                            margin: 0 10px;
+                          }
+
+                          .finance-title {
+                            font-weight: bold;
+                            display: block;
+                            font-size: 12px;
+                          }
+
+                          .rfp-id {
+                            color: #888;
+                            display: block;
+                            font-size: 10px;
+                          }
+                        }
+                      }
+
+                      .status {
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        font-size: 12px;
+                        cursor: pointer;
+
+                        &.approved {
+                          background: #d4edda;
+                          color: #155724;
+                        }
+
+                        &.rejected {
+                          background: #f8d7da;
+                          color: #721c24;
+                        }
+                        &.pending {
+                          background: #fff3cd;
+                          color: #856404;
+                        }
+                      }
+
+                      .amount {
+                        font-size: 16px;
+                        font-weight: bold;
+                      }
+                    }
+
+                    :hover {
+                      cursor: pointer;
+                      background: #fff;
+                    }
+                  }
+
+                  .bordertop {
+                    border-top: 1px solid #e5e5e5;
+                    margin-top: 20px;
+                  }
+
+                  .summary {
+                    margin-top: 20px;
+                    background: #fff;
+                    border-radius: 10px;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .summary-content {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+
+                      h1 {
+                        font-size: 43px;
+                        margin-right: 20px !important;
+                      }
+
+                      p {
+                        font-size: 16px;
+                        margin-right: auto;
+                      }
+
+                      .view-all {
+                        background: transparent
+                          linear-gradient(92deg, #e5821f 0%, #b51b56 100%) 0% 0%
+                          no-repeat padding-box;
+                        color: white;
+                        height: 40px;
+                        width: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .rightBottomRight {
+              width: 100%;
+              height: auto;
+              border-radius: 20px;
+              background: #fff;
+              padding: 20px;
+              .heading {
+                padding-bottom: 17px;
+                font-size: 14px;
+                color: #645f5f;
+              }
+              .coupon {
+                .coupon-detail {
+                  border-radius: 20px;
+                  margin-bottom: 20px;
+                  padding: 20px;
+                  img {
+                    width: 30px;
+                    height: 30px;
+                  }
+
+                  .sub-heading {
+                    padding-top: 20px;
+                    font-size: 14px;
+                    color: #272727;
+                  }
+                  .subText {
+                    font-size: 10px;
+                    color: #272727;
+                  }
+                }
+                .firstCaard {
+                  background: #fff4dd;
+                }
+                .secondCard {
+                  background: #fff2f2;
+                }
+                .thirdCard {
+                  background: #1947ba;
+                  color: #fff;
+                  .sub-heading {
+                    padding-top: 20px;
+                    font-size: 14px;
+                    color: #fff;
+                  }
+                  .subText {
+                    font-size: 10px;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
