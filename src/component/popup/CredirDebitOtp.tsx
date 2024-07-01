@@ -2,7 +2,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import "./popup.scss";
 import { useDispatch } from "react-redux";
 import { isOpenModal } from "@/store/modal-slice";
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import * as LottiePlayer from "@lottiefiles/lottie-player";

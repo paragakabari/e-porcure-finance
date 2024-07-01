@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Lexend } from "next/font/google";
 import "./globals.scss";
+import Script from "next/script";
 
 const inter = Lexend({ subsets: ["latin"] });
 
@@ -25,7 +26,8 @@ export default function RootLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <head>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" />
+       
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
