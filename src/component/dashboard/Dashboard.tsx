@@ -458,7 +458,16 @@ export default function Dashboard({ locale }: { locale: string }) {
                       </div>
                       <div className="mobile-transation">
                         {transactions.map((transaction, index) => (
-                          <div className="card" key={index}>
+                          <>
+                          { transaction?.status === 'PENDING' ? (<>
+                            <div className="card" key={index}  onClick={() =>
+                                    dispatch(
+                                      isOpenModal({
+                                        open: true,
+                                        name: "NeedKyc",
+                                      })
+                                    )
+                                  }>
                             <div className="card-header">
                               <div className="request-id">
                                 <span className="title">Request ID</span>
@@ -492,6 +501,43 @@ export default function Dashboard({ locale }: { locale: string }) {
                               </div>
                             </div>
                           </div>
+                          </>):(<>
+                            <div className="card" key={index}>
+                            <div className="card-header">
+                              <div className="request-id">
+                                <span className="title">Request ID</span>
+                                <span className="date">{transaction.date}</span>
+                              </div>
+                              <div className="amount">{transaction.amount}</div>
+                            </div>
+                            <div className="card-body">
+                              <div className="company-info">
+                                <Image
+                                  height={0}
+                                  width={0}
+                                  unoptimized
+                                  src={transaction.img}
+                                  alt="HSBC Logo"
+                                  className="company-logo"
+                                />
+                                <div className="company-details">
+                                  <span className="company-name">
+                                    HSBC Finance
+                                  </span>
+                                  <span className="rfp-id">
+                                    RFP-ID : {transaction.rfpId}
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                className={`status ${transaction.status.toLowerCase()}`}
+                              >
+                                {transaction.status}
+                              </div>
+                            </div>
+                          </div></>)}
+                          </>
+                         
                         ))}
                       </div>
                       <div className="summary">

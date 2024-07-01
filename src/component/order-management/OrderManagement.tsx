@@ -286,7 +286,7 @@ export default function OrderManagementComponent({
                         height={0}
                         width={0}
                         className="product-image"
-                        src="/assets/ar.png"
+                        src={order.img}
                         alt="Montblanc Starwalker Midnight Black Pen"
                       />
                       <div className="order-info">
@@ -309,7 +309,7 @@ export default function OrderManagementComponent({
                           unoptimized
                           height={0}
                           width={0}
-                          src="/assets/ar.png"
+                          src={order.by}
                           alt={order.customer.name}
                           className="user-avatar"
                         />

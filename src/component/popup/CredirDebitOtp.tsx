@@ -14,14 +14,17 @@ export default function CredirDebitOtp() {
 
   useEffect(() => {
     // set interval for 5 seconds
+    if(showSuccess === true) {
     const interval = setInterval(() => {
       showSuccessModal(false);
       dispatch(isOpenModal({ open: false, name: "CredirDebitOtp" }));
       dispatch(isOpenModal({ open: true, name: "SuccessModal" }));
     }, 5000);
 
+
     // clear interval
     return () => clearInterval(interval);
+  }
   }, [showSuccess]);
 
   return (

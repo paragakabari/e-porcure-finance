@@ -87,6 +87,9 @@
       font-size: 30px;
       margin-bottom: 20px;
       color: #333;
+      @include breakpoint("sm-max") {
+        font-size: 20px;
+      }
     }
     .colorgray {
       padding-bottom: 30px;
@@ -436,14 +439,23 @@
     }
     .otp {
       padding: 40px 0;
+      @include breakpoint("sm-max") {
+        padding: 20px 0;
+      }
       .header {
         font-size: 36px;
         text-align: center;
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+        }
       }
 
       .header h2 {
         margin: 0;
         font-size: 36px;
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+        }
       }
 
       .amount {
@@ -459,6 +471,9 @@
         display: flex;
         justify-content: space-between;
         padding: 16px 40px;
+        @include breakpoint("sm-max") {
+          display: block;
+        }
         .head {
           color: #242424;
           font-size: 18px;
@@ -482,6 +497,9 @@
         border-top: 2px dotted #ccc;
         margin: 16px 0;
         position: relative;
+        @include breakpoint("sm-max") {
+          display: none;
+        }
       }
       .line:before {
         content: "";
@@ -493,6 +511,7 @@
         background: #757677;
         border-radius: 100%;
         left: -10px;
+
       }
 
       .line:after {
@@ -508,6 +527,9 @@
 
       .otp-section {
         padding: 25px 40px 0 40px;
+        @include breakpoint("sm-max") {
+          padding: 25px 0 0 0;
+        }
         .otp-section-grid {
           display: grid;
           grid-template-columns: 300px 1fr;
@@ -517,6 +539,9 @@
           }
           p {
             font-size: 20px;
+            @include breakpoint("sm-max") {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -530,11 +555,15 @@
         justify-content: center;
         gap: 8px;
         margin: 16px 0;
+
       }
       .bottom-grid {
         display: grid;
         grid-template-columns: 200px 1fr;
         padding-top: 40px;
+        @include breakpoint("sm-max") {
+          grid-template-columns: 1fr;
+        }
       }
       .otp-inputs input {
         width: 68px;
@@ -543,6 +572,11 @@
         font-size: 24px;
         border: 1px solid #ccc;
         border-radius: 30px;
+        @include breakpoint("sm-max") {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+        }
       }
 
       .expiry-time {
@@ -610,6 +644,9 @@
     .grids {
       display: grid;
       grid-template-columns: 300px 1fr;
+      @include breakpoint("sm-max") {
+        grid-template-columns: 1fr;
+      }
     }
 
     .left-panel,
@@ -623,6 +660,11 @@
       position: relative;
       padding: 20px 0;
       padding-bottom: 50px;
+      @include breakpoint("sm-max") {
+        border-right: none;
+        border-bottom: 2px dotted #ccc;
+        border-radius: 0;
+      }
     }
 
     .left-panel:before {
@@ -635,6 +677,9 @@
       background: #757677;
       border-radius: 100%;
       right: -10px;
+      @include breakpoint("sm-max") {
+        display: none;
+      }
     }
 
     .left-panel:after {
@@ -646,6 +691,9 @@
       background: #757677;
       border-radius: 100%;
       right: -10px;
+      @include breakpoint("sm-max") {
+        display: none;
+      }
     }
     .left-panel {
       img {

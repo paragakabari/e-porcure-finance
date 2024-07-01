@@ -491,7 +491,7 @@ export default function WalletComponent({ locale }: { locale: string }) {
       </div>
       <div className="card-body">
           <div className="company-info">
-              <Image height={0} width={0} unoptimized src="/assets/ar.png" alt="HSBC Logo" className="company-logo"/>
+              <Image height={0} width={0} unoptimized  src={transaction.img} alt="HSBC Logo" className="company-logo"/>
               <div className="company-details">
                   <span className="company-name">HSBC Finance</span>
                   <span className="rfp-id">RFP-ID : {transaction.rfpId}</span>
@@ -519,7 +519,7 @@ export default function WalletComponent({ locale }: { locale: string }) {
         </div>
         <div className="card-body">
             <div className="company-info">
-                <Image height={0} width={0} unoptimized src="/assets/ar.png" alt="HSBC Logo" className="company-logo"/>
+                <Image height={0} width={0} unoptimized  src={transaction.img} alt="HSBC Logo" className="company-logo"/>
                 <div className="company-details">
                     <span className="company-name">HSBC Finance</span>
                     <span className="rfp-id">RFP-ID : {transaction.rfpId}</span>
