@@ -20,7 +20,8 @@ const t = useTranslations('Data');
           </button>
           <Image unoptimized height={0} width={0} src="/assets/recharge.png" alt="Payment Options" className="payment-icon" />
           <h2 className='mb-4'>{t('Youcanproceed')}</h2>
-          <div className="payment-option">
+          <div className="payment-option" 
+           onClick={() => dispatch(isOpenModal({ open: true, name: "CreditDebitModel" }))}>
          <Image unoptimized height={25} width={30} src="/assets/credit-debit.svg" alt="Credit/Debit Card" />
 
             <span>{t('CreditDebit')}</span>

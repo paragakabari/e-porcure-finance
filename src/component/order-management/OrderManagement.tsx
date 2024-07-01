@@ -31,6 +31,9 @@ import ThankYouModal from "../popup/ThankYouModal";
 import LeaveYourRequestModal from "../popup/LeaveYourRequestModal";
 import RechargeWallet from "../popup/RechargeWallet";
 import WalletRecharge from "../popup/WalletRecharge";
+import CreditDebitModel from "../popup/CredirDebitModel";
+import CredirDebitOtp from "../popup/CredirDebitOtp";
+import Restricted from "../popup/Restricted";
 
 ChartJS.register(
   LinearScale,
@@ -395,6 +398,21 @@ export default function OrderManagementComponent({
       {modalData.isOpen && modalData.modalName === "WalletRecharge" && (
         <>
           <WalletRecharge />
+        </>
+      )}
+      {modalData.isOpen && modalData.modalName === "CreditDebitModel" && (
+        <>
+          <CreditDebitModel />
+        </>
+      )}
+        {modalData.isOpen && modalData.modalName === "CredirDebitOtp" && (
+        <>
+          <CredirDebitOtp />
+        </>
+      )}
+       {modalData.isOpen && modalData.modalName === "Restricted" && (
+        <>
+          <Restricted />
         </>
       )}
     </div>

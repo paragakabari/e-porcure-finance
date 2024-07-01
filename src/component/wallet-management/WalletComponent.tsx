@@ -32,6 +32,8 @@ import Sidebar from "../sidebar/sidebar";
 import { useTranslations } from "next-intl";
 import RechargeWallet from "../popup/RechargeWallet";
 import WalletRecharge from "../popup/WalletRecharge";
+import CredirDebitModel from "../popup/CredirDebitModel";
+import CredirDebitOtp from "../popup/CredirDebitOtp";
 
 ChartJS.register(
   LinearScale,
@@ -669,6 +671,16 @@ export default function WalletComponent({ locale }: { locale: string }) {
       {modalData.isOpen && modalData.modalName === "WalletRecharge" && (
         <>
           <WalletRecharge />
+        </>
+      )}
+      {modalData.isOpen && modalData.modalName === "CredirDebitModel" && (
+        <>
+          <CredirDebitModel />
+        </>
+      )}
+      {modalData.isOpen && modalData.modalName === "CredirDebitOtp" && (
+        <>
+          <CredirDebitOtp />
         </>
       )}
     </div>

@@ -34,6 +34,10 @@ import RechargeWallet from "../popup/RechargeWallet";
 import WalletRecharge from "../popup/WalletRecharge";
 import SuccessModal from "../popup/SuccessModal";
 import SignInCard from "../popup/SignInCard";
+import CredirDebitModel from "../popup/CredirDebitModel";
+import CreditDebitModel from "../popup/CredirDebitModel";
+import CredirDebitOtp from "../popup/CredirDebitOtp";
+import Restricted from "../popup/Restricted";
 
 ChartJS.register(
   LinearScale,
@@ -279,7 +283,7 @@ export default function Dashboard({ locale }: { locale: string }) {
                                     unoptimized
                                     height={0}
                                     width={0}
-                                    src="/assets/ar.png"
+                                    src="/assets/snb.png"
                                     alt="HSBC Logo"
                                     className="logo"
                                   />
@@ -287,7 +291,7 @@ export default function Dashboard({ locale }: { locale: string }) {
                                     unoptimized
                                     height={0}
                                     width={0}
-                                    src="/assets/ar.png"
+                                    src="/assets/sib.png"
                                     alt="Other Logo"
                                     className="logo"
                                   />
@@ -295,7 +299,7 @@ export default function Dashboard({ locale }: { locale: string }) {
                                     unoptimized
                                     height={0}
                                     width={0}
-                                    src="/assets/ar.png"
+                                    src="/assets/sabb.png"
                                     alt="SNB Logo"
                                     className="logo"
                                   />
@@ -778,6 +782,21 @@ export default function Dashboard({ locale }: { locale: string }) {
           </>
         )
       }
+        {modalData.isOpen && modalData.modalName === "CreditDebitModel" && (
+        <>
+          <CreditDebitModel />
+        </>
+      )}
+        {modalData.isOpen && modalData.modalName === "CredirDebitOtp" && (
+        <>
+          <CredirDebitOtp />
+        </>
+      )}
+        {modalData.isOpen && modalData.modalName === "Restricted" && (
+        <>
+          <Restricted />
+        </>
+      )}
       
     </div>
   );

@@ -30,6 +30,9 @@ import { RootState } from "@/store/store";
 import { IoCloseOutline, IoPencil, IoPencilOutline } from "react-icons/io5";
 import Sidebar from "../sidebar/sidebar";
 import { useTranslations } from "next-intl";
+import CreditDebitModel from "../popup/CredirDebitModel";
+import CredirDebitOtp from "../popup/CredirDebitOtp";
+import Restricted from "../popup/Restricted";
 
 ChartJS.register(
   LinearScale,
@@ -274,6 +277,21 @@ export default function OrganizationalComponent({
       {modalData.isOpen && modalData.modalName === "LeaveYourRequestModal" && (
         <>
           <LeaveYourRequestModal />
+        </>
+      )}
+      {modalData.isOpen && modalData.modalName === "CreditDebitModel" && (
+        <>
+          <CreditDebitModel />
+        </>
+      )}
+        {modalData.isOpen && modalData.modalName === "CredirDebitOtp" && (
+        <>
+          <CredirDebitOtp />
+        </>
+      )}
+       {modalData.isOpen && modalData.modalName === "Restricted" && (
+        <>
+          <Restricted />
         </>
       )}
     </div>
