@@ -617,7 +617,7 @@ export default function Dashboard({ locale }: { locale: string }) {
                             dispatch(
                               isOpenModal({
                                 open: true,
-                                name: "RechargeTheWalletModel",
+                                name: "Restricted",
                               })
                             );
                           }}

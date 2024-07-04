@@ -31,7 +31,7 @@ export default function Restricted() {
         <div className="scf-buttons">
           
           <button className="scf-button yes-interested w-50"
-           onClick={() => dispatch(isOpenModal({ open: true, name: "KybModal" }))}
+           onClick={() => dispatch(isOpenModal({ open: true, name: "RechargeTheWalletModel" }))}
           >Ok</button>
         </div>
         

@@ -79,7 +79,7 @@ export default function CreditDebitModel() {
                 <input type="text" placeholder="XXX" />
               </div>
               <div className="align-logo">
-                <Image unoptimized height={50} width={120} src="/assets/cvv.png" alt="Visa" />
+                <Image unoptimized height={40} width={100} src="/assets/cvv.png" alt="Visa" />
                 </div>
             </div>
             <button className="enquire-button width-manage"

@@ -71,11 +71,11 @@
       font-size: 26px;
     }
     .res-sub {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 300;
     }
     .res-des {
-      font-size: 40px;
+      font-size: 28px;
     }
     .payment-icon {
       width: 180px;
@@ -566,16 +566,24 @@
         }
       }
       .otp-inputs input {
-        width: 68px;
-        height: 57px;
+        width: 54px;
+        height: 64px;
         text-align: center;
         font-size: 24px;
-        border: 1px solid #ccc;
+        border: none;
+        background: #f1f1f1;
         border-radius: 30px;
         @include breakpoint("sm-max") {
           width: 50px;
           height: 50px;
           font-size: 20px;
+        }
+        &::placeholder {
+         
+          position: absolute;
+          top: 30%;
+          left: 40%;
+          height: 57px;
         }
       }
 
@@ -605,7 +613,7 @@
       }
       .width-manage {
         height: max-content;
-        padding: 5px 30px !important;
+        padding: 10px 30px !important;
       }
     }
   }
@@ -752,7 +760,7 @@
       color: #272727;
     }
     .card-type-small {
-      font-size: 12px;
+      font-size: 11px;
       color: #c6c6c6;
     }
 
@@ -764,12 +772,12 @@
       color: #707070;
       letter-spacing: 3.4px;
       font-weight: 300;
-      background: #ddd;
+      background: #f1f1f1;
     }
 
     .width-manage {
       margin-top: 40px;
-      padding: 7px 40px;
+      padding: 10px 40px;
       @include breakpoint("sm-max") {
         padding: 7px 20px;
       }
@@ -1225,6 +1233,7 @@
   .agree-button {
     background-color: #ff6347;
     color: white;
+    border-radius: 25px;
   }
   .textleft {
     text-align: justify !important;

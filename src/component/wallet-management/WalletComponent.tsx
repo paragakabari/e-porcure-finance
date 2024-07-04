@@ -60,10 +60,6 @@ export default function WalletComponent({ locale }: { locale: string }) {
     },
   ];
 
-
-
- 
-
   const transactionsData = [
     {
       id: 1,
@@ -71,8 +67,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "PENDING",
       amount: "SAR 15000",
       rfpId: "2634523",
-      img:'/assets/ai.png',
-      name:"AI Develop"
+      img: "/assets/ai.png",
+      name: "AI Develop",
     },
     {
       id: 2,
@@ -80,9 +76,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "REJECTED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      img:'/assets/bsf.png',
-      name:"BSF LTD"
-
+      img: "/assets/bsf.png",
+      name: "BSF LTD",
     },
     {
       id: 3,
@@ -90,8 +85,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 5092",
       rfpId: "2634523",
-      img:'/assets/hsbc-icon-md.png',
-      name:'HSBC',
+      img: "/assets/hsbc-icon-md.png",
+      name: "HSBC",
     },
     {
       id: 4,
@@ -99,8 +94,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 16000",
       rfpId: "2634523",
-      name:"Alima",
-      img:'/assets/alima.png'
+      name: "Alima",
+      img: "/assets/alima.png",
     },
     {
       id: 5,
@@ -108,8 +103,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      name:'SIB',
-      img:'/assets/sib.png'
+      name: "SIB",
+      img: "/assets/sib.png",
     },
     {
       id: 6,
@@ -117,8 +112,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      name:'SNB',
-      img:'/assets/snb.png'
+      name: "SNB",
+      img: "/assets/snb.png",
     },
   ];
 
@@ -129,8 +124,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "PENDING",
       amount: "SAR 15000",
       rfpId: "2634523",
-      img:'/assets/ai.png',
-      name:"AI Develop"
+      img: "/assets/ai.png",
+      name: "AI Develop",
     },
     {
       id: 2,
@@ -138,9 +133,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "REJECTED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      img:'/assets/bsf.png',
-      name:"BSF LTD"
-
+      img: "/assets/bsf.png",
+      name: "BSF LTD",
     },
     {
       id: 3,
@@ -148,8 +142,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 5092",
       rfpId: "2634523",
-      img:'/assets/hsbc-icon-md.png',
-      name:'HSBC',
+      img: "/assets/hsbc-icon-md.png",
+      name: "HSBC",
     },
     {
       id: 4,
@@ -157,8 +151,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 16000",
       rfpId: "2634523",
-      name:"Alima",
-      img:'/assets/alima.png'
+      name: "Alima",
+      img: "/assets/alima.png",
     },
     {
       id: 5,
@@ -166,8 +160,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      name:'SIB',
-      img:'/assets/sib.png'
+      name: "SIB",
+      img: "/assets/sib.png",
     },
     {
       id: 6,
@@ -175,8 +169,8 @@ export default function WalletComponent({ locale }: { locale: string }) {
       status: "APPROVED",
       amount: "SAR 45000",
       rfpId: "2634523",
-      name:'SNB',
-      img:'/assets/snb.png'
+      name: "SNB",
+      img: "/assets/snb.png",
     },
   ];
 
@@ -263,171 +257,22 @@ export default function WalletComponent({ locale }: { locale: string }) {
                           </div>
                         </div>
                         <div className="desktop-table">
-
-                       
-                        {tab === "recharge" ? (
-                          <>
-                            <ul>
-                              {transactions.map((transaction) => (
-                                <>
-                                  {transaction?.status === "PENDING" ? (
-                                    <li
-                                    
-                                      className="transaction-item"
-                                      onClick={() =>
-                                        dispatch(
-                                          isOpenModal({
-                                            open: true,
-                                            name: "NeedKyc",
-                                          })
-                                        )
-                                      }
-                                    >
-                                      <div className="transaction-info">
-                                        <div>
-                                          <div className="request-id">
-                                            Request ID
-                                          </div>
-                                          <div className="date">
-                                            {transaction.date}
-                                          </div>
-                                        </div>
-                                        <div className="finance-info">
-                                          <Image
-                                            unoptimized
-                                            height={0}
-                                            width={0}
-                                            src={transaction.img}
-                                            alt="HSBC Logo"
-                                            className="logo"
-                                          />
-                                          <div>
-                                            <div className="finance-title">
-                                            {transaction.name}
-                                            </div>
-                                            <div className="rfp-id">
-                                              RFP-ID : {transaction.rfpId}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className={`status ${transaction.status.toLowerCase()}`}
-                                      >
-                                        {transaction.status}
-                                      </div>
-                                      <div className="amount">
-                                        {transaction.amount}
-                                      </div>
-                                    </li>
-                                  ) : (
-                                    <>
+                          {tab === "recharge" ? (
+                            <>
+                              <ul>
+                                {transactions.map((transaction) => (
+                                  <>
+                                    {transaction?.status === "PENDING" ? (
                                       <li
                                         className="transaction-item"
-                                      >
-                                        <div className="transaction-info">
-                                          <div>
-                                            <div className="request-id">
-                                              Request ID
-                                            </div>
-                                            <div className="date">
-                                              {transaction.date}
-                                            </div>
-                                          </div>
-                                          <div className="finance-info">
-                                            <Image
-                                              unoptimized
-                                              height={0}
-                                              width={0}
-                                              src={transaction.img}
-                                              alt="HSBC Logo"
-                                              className="logo"
-                                            />
-                                            <div>
-                                              <div className="finance-title">
-                                              {transaction.name}
-                                              </div>
-                                              <div className="rfp-id">
-                                                RFP-ID : {transaction.rfpId}
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div
-                                          className={`status ${transaction.status.toLowerCase()}`}
-                                        >
-                                          {transaction.status}
-                                        </div>
-                                        <div className="amount">
-                                          {transaction.amount}
-                                        </div>
-                                      </li>
-                                    </>
-                                  )}
-                                </>
-                              ))}
-                            </ul>
-                          </>
-                        ) : (
-                          <>
-                            <ul>
-                              {transactionsData.map((transaction) => (
-                                <>
-                                  {transaction?.status === "PENDING" ? (
-                                    <li
-                                     
-                                      className="transaction-item"
-                                      onClick={() =>
-                                        dispatch(
-                                          isOpenModal({
-                                            open: true,
-                                            name: "NeedKyc",
-                                          })
-                                        )
-                                      }
-                                    >
-                                      <div className="transaction-info">
-                                        <div>
-                                          <div className="request-id">
-                                            Request ID
-                                          </div>
-                                          <div className="date">
-                                            {transaction.date}
-                                          </div>
-                                        </div>
-                                        <div className="finance-info">
-                                          <Image
-                                            unoptimized
-                                            height={0}
-                                            width={0}
-                                            src={transaction.img}
-                                            alt="HSBC Logo"
-                                            className="logo"
-                                          />
-                                          <div>
-                                            <div className="finance-title">
-                                              {transaction.name}
-                                            </div>
-                                            <div className="rfp-id">
-                                              RFP-ID : {transaction.rfpId}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className={`status ${transaction.status.toLowerCase()}`}
-                                      >
-                                        {transaction.status}
-                                      </div>
-                                      <div className="amount">
-                                        {transaction.amount}
-                                      </div>
-                                    </li>
-                                  ) : (
-                                    <>
-                                      <li
-                                     
-                                        className="transaction-item"
+                                        onClick={() =>
+                                          dispatch(
+                                            isOpenModal({
+                                              open: true,
+                                              name: "NeedKyc",
+                                            })
+                                          )
+                                        }
                                       >
                                         <div className="transaction-info">
                                           <div>
@@ -466,78 +311,251 @@ export default function WalletComponent({ locale }: { locale: string }) {
                                           {transaction.amount}
                                         </div>
                                       </li>
-                                    </>
-                                  )}
+                                    ) : (
+                                      <>
+                                        <li className="transaction-item">
+                                          <div className="transaction-info">
+                                            <div>
+                                              <div className="request-id">
+                                                Request ID
+                                              </div>
+                                              <div className="date">
+                                                {transaction.date}
+                                              </div>
+                                            </div>
+                                            <div className="finance-info">
+                                              <Image
+                                                unoptimized
+                                                height={0}
+                                                width={0}
+                                                src={transaction.img}
+                                                alt="HSBC Logo"
+                                                className="logo"
+                                              />
+                                              <div>
+                                                <div className="finance-title">
+                                                  {transaction.name}
+                                                </div>
+                                                <div className="rfp-id">
+                                                  RFP-ID : {transaction.rfpId}
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            className={`status ${transaction.status.toLowerCase()}`}
+                                          >
+                                            {transaction.status}
+                                          </div>
+                                          <div className="amount">
+                                            {transaction.amount}
+                                          </div>
+                                        </li>
+                                      </>
+                                    )}
+                                  </>
+                                ))}
+                              </ul>
+                            </>
+                          ) : (
+                            <>
+                              <ul>
+                                {transactionsData.map((transaction) => (
+                                  <>
+                                    {transaction?.status === "PENDING" ? (
+                                      <li
+                                        className="transaction-item"
+                                        onClick={() =>
+                                          dispatch(
+                                            isOpenModal({
+                                              open: true,
+                                              name: "NeedKyc",
+                                            })
+                                          )
+                                        }
+                                      >
+                                        <div className="transaction-info">
+                                          <div>
+                                            <div className="request-id">
+                                              Request ID
+                                            </div>
+                                            <div className="date">
+                                              {transaction.date}
+                                            </div>
+                                          </div>
+                                          <div className="finance-info">
+                                            <Image
+                                              unoptimized
+                                              height={0}
+                                              width={0}
+                                              src={transaction.img}
+                                              alt="HSBC Logo"
+                                              className="logo"
+                                            />
+                                            <div>
+                                              <div className="finance-title">
+                                                {transaction.name}
+                                              </div>
+                                              <div className="rfp-id">
+                                                RFP-ID : {transaction.rfpId}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          className={`status ${transaction.status.toLowerCase()}`}
+                                        >
+                                          {transaction.status}
+                                        </div>
+                                        <div className="amount">
+                                          {transaction.amount}
+                                        </div>
+                                      </li>
+                                    ) : (
+                                      <>
+                                        <li className="transaction-item">
+                                          <div className="transaction-info">
+                                            <div>
+                                              <div className="request-id">
+                                                Request ID
+                                              </div>
+                                              <div className="date">
+                                                {transaction.date}
+                                              </div>
+                                            </div>
+                                            <div className="finance-info">
+                                              <Image
+                                                unoptimized
+                                                height={0}
+                                                width={0}
+                                                src={transaction.img}
+                                                alt="HSBC Logo"
+                                                className="logo"
+                                              />
+                                              <div>
+                                                <div className="finance-title">
+                                                  {transaction.name}
+                                                </div>
+                                                <div className="rfp-id">
+                                                  RFP-ID : {transaction.rfpId}
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div
+                                            className={`status ${transaction.status.toLowerCase()}`}
+                                          >
+                                            {transaction.status}
+                                          </div>
+                                          <div className="amount">
+                                            {transaction.amount}
+                                          </div>
+                                        </li>
+                                      </>
+                                    )}
+                                  </>
+                                ))}
+                              </ul>
+                            </>
+                          )}
+                        </div>
+                        <div className="mobile-table">
+                          {tab === "recharge" ? (
+                            <>
+                              {transactions.map((transaction) => (
+                                <>
+                                  <div className="card">
+                                    <div className="card-header">
+                                      <div className="request-id">
+                                        <span className="title">
+                                          Request ID
+                                        </span>
+                                        <span className="date">
+                                          {transaction.date}
+                                        </span>
+                                      </div>
+                                      <div className="amount">
+                                        {transaction.amount}
+                                      </div>
+                                    </div>
+                                    <div className="card-body">
+                                      <div className="company-info">
+                                        <Image
+                                          height={0}
+                                          width={0}
+                                          unoptimized
+                                          src={transaction.img}
+                                          alt="HSBC Logo"
+                                          className="company-logo"
+                                        />
+                                        <div className="company-details">
+                                          <span className="company-name">
+                                            HSBC Finance
+                                          </span>
+                                          <span className="rfp-id">
+                                            RFP-ID : {transaction.rfpId}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={`status ${transaction.status.toLowerCase()}`}
+                                      >
+                                        {transaction.status}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </>
                               ))}
-                            </ul>
-                          </>
-                        )}
-                         </div>
-                         <div className="mobile-table">
-{
-  tab === "recharge" ? (
-   <>
-   {
-    transactions.map((transaction) => (
-      <>
-      <div className="card">
-      <div className="card-header">
-          <div className="request-id">
-              <span className="title">Request ID</span>
-              <span className="date">{transaction.date}</span>
-          </div>
-          <div className="amount">{transaction.amount}</div>
-      </div>
-      <div className="card-body">
-          <div className="company-info">
-              <Image height={0} width={0} unoptimized  src={transaction.img} alt="HSBC Logo" className="company-logo"/>
-              <div className="company-details">
-                  <span className="company-name">HSBC Finance</span>
-                  <span className="rfp-id">RFP-ID : {transaction.rfpId}</span>
-              </div>
-          </div>
-          <div   className={`status ${transaction.status.toLowerCase()}`}>{transaction.status}</div>
-      </div>
-  </div>
-      </>
-    ))
-   }
-   </>
-  ) : (
-    <>
-    {
-      transactionsData.map((transaction) => (
-        <>
-        <div className="card">
-        <div className="card-header">
-            <div className="request-id">
-                <span className="title">Request ID</span>
-                <span className="date">{transaction.date}</span>
-            </div>
-            <div className="amount">{transaction.amount}</div>
-        </div>
-        <div className="card-body">
-            <div className="company-info">
-                <Image height={0} width={0} unoptimized  src={transaction.img} alt="HSBC Logo" className="company-logo"/>
-                <div className="company-details">
-                    <span className="company-name">HSBC Finance</span>
-                    <span className="rfp-id">RFP-ID : {transaction.rfpId}</span>
-                </div>
-            </div>
-            <div   className={`status ${transaction.status.toLowerCase()}`}>{transaction.status}</div>
-        </div>
-    </div>
-        </>
-      ))
-    }
-    </>
-  )
-
-}
-
-                   
-                         </div>
+                            </>
+                          ) : (
+                            <>
+                              {transactionsData.map((transaction) => (
+                                <>
+                                  <div className="card">
+                                    <div className="card-header">
+                                      <div className="request-id">
+                                        <span className="title">
+                                          Request ID
+                                        </span>
+                                        <span className="date">
+                                          {transaction.date}
+                                        </span>
+                                      </div>
+                                      <div className="amount">
+                                        {transaction.amount}
+                                      </div>
+                                    </div>
+                                    <div className="card-body">
+                                      <div className="company-info">
+                                        <Image
+                                          height={0}
+                                          width={0}
+                                          unoptimized
+                                          src={transaction.img}
+                                          alt="HSBC Logo"
+                                          className="company-logo"
+                                        />
+                                        <div className="company-details">
+                                          <span className="company-name">
+                                            HSBC Finance
+                                          </span>
+                                          <span className="rfp-id">
+                                            RFP-ID : {transaction.rfpId}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={`status ${transaction.status.toLowerCase()}`}
+                                      >
+                                        {transaction.status}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </>
+                              ))}
+                            </>
+                          )}
+                        </div>
 
                         <div className="bordertop"></div>
                         <div className="summary">
@@ -561,47 +579,59 @@ export default function WalletComponent({ locale }: { locale: string }) {
                     </div>
                   </div>
 
-                  <div className="rightBottomRight">
-                    <div className="heading">{t("RechargeviaCoupons")}</div>
-                    <div className="coupon ">
-                      <div className="coupon-detail firstCaard">
-                        <div>
-                          <Image
-                            unoptimized
-                            height={0}
-                            width={0}
-                            src="/assets/hsbc-icon-md.png"
-                            alt="LOgo"
-                          />
+                  <div className="rightBottomRight position-relative">
+                    <div className="opacity-25">
+                      <div className="heading">{t("RechargeviaCoupons")}</div>
+                      <div className="coupon ">
+                        <div className="coupon-detail firstCaard">
+                          <div>
+                            <Image
+                              unoptimized
+                              height={0}
+                              width={0}
+                              src="/assets/hsbc-icon-md.png"
+                              alt="LOgo"
+                            />
+                          </div>
+                          <div className="sub-heading">
+                            {t("GetBalanceupto")}
+                          </div>
+                          <div className="subText">{t("Applicable")}</div>
                         </div>
-                        <div className="sub-heading">{t("GetBalanceupto")}</div>
-                        <div className="subText">{t("Applicable")}</div>
+                        <div className="coupon-detail secondCard">
+                          <div>
+                            <Image
+                              unoptimized
+                              height={0}
+                              width={0}
+                              src="/assets/cou2.png"
+                              alt="LOgo1"
+                            />
+                          </div>
+                          <div className="sub-heading">{t("Get")}</div>
+                          <div className="subText">{t("Applicable")}</div>
+                        </div>
+                        <div className="coupon-detail thirdCard">
+                          <div>
+                            <Image
+                              unoptimized
+                              height={0}
+                              width={0}
+                              src="/assets/cou3.png"
+                              alt="LOgo2"
+                            />
+                          </div>
+                          <div className="sub-heading">
+                            {t("GetBalanceupto")}
+                          </div>
+                          <div className="subText">{t("Applicable")}</div>
+                        </div>
                       </div>
-                      <div className="coupon-detail secondCard">
-                        <div>
-                          <Image
-                            unoptimized
-                            height={0}
-                            width={0}
-                            src="/assets/cou2.png"
-                            alt="LOgo1"
-                          />
-                        </div>
-                        <div className="sub-heading">{t("Get")}</div>
-                        <div className="subText">{t("Applicable")}</div>
-                      </div>
-                      <div className="coupon-detail thirdCard">
-                        <div>
-                          <Image
-                            unoptimized
-                            height={0}
-                            width={0}
-                            src="/assets/cou3.png"
-                            alt="LOgo2"
-                          />
-                        </div>
-                        <div className="sub-heading">{t("GetBalanceupto")}</div>
-                        <div className="subText">{t("Applicable")}</div>
+                    </div>
+                    <div className="position-absolute top-50 w-100">
+                      <div className="text-center">
+                        <div> Coming Soon</div>
+                        <div> Recharge Via Coupons</div>
                       </div>
                     </div>
                   </div>
@@ -663,7 +693,7 @@ export default function WalletComponent({ locale }: { locale: string }) {
           <LeaveYourRequestModal />
         </>
       )}
-       {modalData.isOpen && modalData.modalName === "RechargeWallet" && (
+      {modalData.isOpen && modalData.modalName === "RechargeWallet" && (
         <>
           <RechargeWallet />
         </>

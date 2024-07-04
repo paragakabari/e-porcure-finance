@@ -111,7 +111,7 @@ export default function Sidebar({ locale }) {
                     redirect.push(`${locale === "en" ? "/en" : "/ar"}/`)
                   }
                 >
-                  <a className={searchParams === `/en` ? "" : ""}>
+                  <a className={searchParams === `/en` ? "actives" : ""}>
                     
                     {t("Dashboard")}
                   </a>
@@ -148,7 +148,7 @@ export default function Sidebar({ locale }) {
                 >
                   <a
                     className={
-                      searchParams === `/en/order-management` ? "" : ""
+                      searchParams === `/en/order-management` ? "actives" : ""
                     }
                   >
                     {t("OrderManagement")}
@@ -173,7 +173,7 @@ export default function Sidebar({ locale }) {
                 >
                   <a
                     className={
-                      searchParams === `/en/organizational-employee` ? "" : ""
+                      searchParams === `/en/organizational-employee` ? "actives" : ""
                     }
                   >
                     {t("WorkspaceSettings")}
@@ -193,7 +193,7 @@ export default function Sidebar({ locale }) {
                 >
                   <a
                     className={
-                      searchParams === `/en/wallet-management` ? "" : ""
+                      searchParams === `/en/wallet-management` ? "actives" : ""
                     }
                   >
                     {t("WalletManagement")}
