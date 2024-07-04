@@ -62,6 +62,10 @@
       cursor: pointer;
       background: #7070701a 0% 0% no-repeat padding-box;
       border-radius: 5px;
+      @include breakpoint("sm-max") {
+        top: 20px;
+        right: 20px;
+      }
     }
     .loder {
       display: flex;
@@ -69,18 +73,32 @@
     }
     .res-heading {
       font-size: 26px;
+      @include breakpoint("sm-max") {
+        font-size: 20px;
+      }
     }
     .res-sub {
       font-size: 20px;
+
       font-weight: 300;
+      @include breakpoint("sm-max") {
+        font-size: 16px;
+      }
     }
     .res-des {
       font-size: 28px;
+      @include breakpoint("sm-max") {
+        font-size: 20px;
+      }
     }
     .payment-icon {
       width: 180px;
       height: 180px;
       margin-bottom: 20px;
+      @media (max-width: 768px) {
+        width: 120px;
+        height: 120px;
+      }
     }
 
     h2 {
@@ -287,6 +305,9 @@
         font-size: 24px;
         font-weight: bold;
         color: $primary-color;
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+        }
       }
     }
     .wallet-recharge {
@@ -436,6 +457,10 @@
       cursor: pointer;
       background: #7070701a 0% 0% no-repeat padding-box;
       border-radius: 5px;
+      @include breakpoint("sm-max") {
+        top: 20px;
+        right: 20px;
+      }
     }
     .otp {
       padding: 40px 0;
@@ -461,6 +486,9 @@
       .amount {
         font-size: 36px;
         margin: 16px 0;
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+        }
       }
 
       .amount span {
@@ -614,6 +642,9 @@
       .width-manage {
         height: max-content;
         padding: 10px 30px !important;
+        @include breakpoint("sm-max") {
+          padding: 10px 20px !important;
+        }
       }
     }
   }
@@ -647,6 +678,10 @@
       cursor: pointer;
       background: #7070701a 0% 0% no-repeat padding-box;
       border-radius: 5px;
+      @include breakpoint("sm-max") {
+        top: 20px;
+        right: 20px;
+      }
     }
 
     .grids {

@@ -3,6 +3,12 @@
   .dashboardAlignment {
     .dashboardGrid {
       .rightSideAlignment {
+        .rightTopDetails{
+          display: unset !important;
+         h1{
+          margin-bottom: 20px !important;
+         }
+        }
         .rechargethewallet {
           background-color: #ff6a57;
           border-radius: 25px;

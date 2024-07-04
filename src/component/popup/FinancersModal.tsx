@@ -381,21 +381,14 @@ export default function FinanceModal() {
 
                     <div
                       className="bank-action"
-                      onClick={() => setToggle(!toggle)}
+                      onClick={() => handleToggle(index)}
                     >
                       <button className="action-button">→</button>
                     </div>
                   </div>
-                  
-                </>
-              ))}
-            </div>
-
-            {/* <div>
-              {toggle && (
-                <>
-                  <div className="d-block">
-                    <div className="loan-offers">
+                  {
+                    expandedRowIndex === index  && (
+                      <div className="loan-offers">
                       <div>
                         <div className="bank-header">
                           <div className="f-table">
@@ -614,10 +607,15 @@ export default function FinanceModal() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                    )
+
+                  }
                 </>
-              )}
-            </div> */}
+              ))}
+            </div>
+
+           
+            
           </div>
         </div>
       </div>
