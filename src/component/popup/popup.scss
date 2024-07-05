@@ -227,6 +227,9 @@
       margin: 10px 0;
       cursor: pointer;
       transition: background 0.3s;
+      @include breakpoint("sm-max") {
+        padding: 10px;
+      }
 
       i {
         font-size: 24px;
@@ -312,11 +315,18 @@
     }
     .wallet-recharge {
       padding: 20px;
+      @media (max-width: 768px) {
+        padding: 0px;
+      }
 
       .title {
         font-size: 26px;
+
         margin-bottom: 20px;
         color: #272727;
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+        }
       }
 
       .wallet-balance {
@@ -501,6 +511,7 @@
         padding: 16px 40px;
         @include breakpoint("sm-max") {
           display: block;
+          padding:  16px 0;
         }
         .head {
           color: #242424;
@@ -602,8 +613,8 @@
         background: #f1f1f1;
         border-radius: 30px;
         @include breakpoint("sm-max") {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
           font-size: 20px;
         }
         &::placeholder {

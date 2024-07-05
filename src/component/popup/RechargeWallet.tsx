@@ -48,13 +48,13 @@ export default function RechargeWallet() {
                 />
               </div>
               <div>
-                <p>
+                <p className="font-12">
                   {t('Yourwalletbalance')}
                 </p>
               </div>
             </div>
             <div>
-              <h3> 1000</h3>
+              <h3 className="font-14"> 1000</h3>
             </div>
           </div>
         </div>
